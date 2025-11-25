@@ -3,6 +3,9 @@ from django.apps import apps
 
 
 class PledgeSerializer(serializers.ModelSerializer):
+    # add supporter line to pledge"
+    supporter = serializers.ReadOnlyField(source='supporter.id')
+
     class Meta:
         model = apps.get_model('fundraisers.Pledge')
         fields = '__all__'
