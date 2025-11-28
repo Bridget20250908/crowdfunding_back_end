@@ -56,9 +56,11 @@
   * User Table
   
     ![db_scheme_customuser.png](db_scheme_customuser.png)
+  
   * Fundraiser Table
   
     ![db_scheme_fundraiser.png](db_scheme_fundraiser.png)
+  
   * Pledge Table
   
     ![db_scheme_pledge.png](db_scheme_pledge.png)
