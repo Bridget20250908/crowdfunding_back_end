@@ -66,6 +66,12 @@ SPECTACULAR_SETTINGS = {
     'TITLE': 'Crowd Funding Backend',
     'DESCRIPTION': 'API specification for Crowd Funding Backend',
     'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SERVERS': [
+        {'url': 'http://localhost:8000', 'description': 'Local Development server'},
+        {'url': 'https://bridget-crowdfunding-29f799e098ab.herokuapp.com', 'description': 'Production server'},
+    ],
     # ... other settings like 'SERVE_INCLUDE_SCHEMA', 'SWAGGER_UI_SETTINGS', etc.
 }
 
