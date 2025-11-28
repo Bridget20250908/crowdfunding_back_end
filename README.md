@@ -1,7 +1,7 @@
-# Crowd Funding Backend API
+# Crowd Funding Backend
 
 ### A link to the deployed project.
-[Crowd Funding Backend API](https://bridget-crowdfunding-29f799e098ab.herokuapp.com)
+[Crowd Funding Backend](https://bridget-crowdfunding-29f799e098ab.herokuapp.com)
 ### A screenshot of Insomnia, demonstrating a successful GET method for any endpoint.
 ![insomnia_get_users.png](insomnia_get_users.png)
 ### A screenshot of Insomnia, demonstrating a successful POST method for any endpoint.
@@ -51,3 +51,5 @@
 * Click on the **Send** button to create a new fundraiser.
     ![insomnia_create_fundraiser_response.png](insomnia_create_fundraiser_response.png)
 ### Your refined API specification and Database Schema.
+[API specification](https://bridget-crowdfunding-29f799e098ab.herokuapp.com/swagger/)
+[Database Schema](https://bridget-crowdfunding-29f799e098ab.herokuapp.com/swagger/)
