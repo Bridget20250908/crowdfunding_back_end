@@ -52,13 +52,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_spectacular'
 ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
 }
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Crowd Funding Backend',
+    'DESCRIPTION': 'API specification for Crowd Funding Backend',
+    'VERSION': '1.0.0',
+    # ... other settings like 'SERVE_INCLUDE_SCHEMA', 'SWAGGER_UI_SETTINGS', etc.
+}
+
 AUTH_USER_MODEL = 'users.CustomUser'
 
 MIDDLEWARE = [
