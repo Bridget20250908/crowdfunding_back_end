@@ -51,5 +51,14 @@
 * Click on the **Send** button to create a new fundraiser.
     ![insomnia_create_fundraiser_response.png](insomnia_create_fundraiser_response.png)
 ### Your refined API specification and Database Schema.
-[API specification](https://bridget-crowdfunding-29f799e098ab.herokuapp.com/swagger/)
-[Database Schema](https://bridget-crowdfunding-29f799e098ab.herokuapp.com/swagger/)
+* [API specification](https://bridget-crowdfunding-29f799e098ab.herokuapp.com/swagger/)
+* Database Schema
+  * User Table
+  
+    ![db_scheme_customuser.png](db_scheme_customuser.png)
+  * Fundraiser Table
+  
+    ![db_scheme_fundraiser.png](db_scheme_fundraiser.png)
+  * Pledge Table
+  
+    ![db_scheme_pledge.png](db_scheme_pledge.png)
