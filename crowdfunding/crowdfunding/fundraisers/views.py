@@ -25,7 +25,7 @@ class FundraiserList(APIView):
 
 class FundraiserDetail(APIView):
     Permission_classes = [
-        permissions. IsAuthenticatedOrReadOnly,
+        permissions.IsAuthenticatedOrReadOnly,
         IsOwnerOrReadOnly
     ]
 
