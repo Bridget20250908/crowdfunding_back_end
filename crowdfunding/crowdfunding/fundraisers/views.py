@@ -81,7 +81,7 @@ class PledgeList(APIView):
 
 class PledgeDetail(APIView):
     permission_classes = [
-        permissions. IsAuthenticatedOrReadOnly,
+        permissions.IsAuthenticatedOrReadOnly,
         IsOwnerOrReadOnly
     ]
 
