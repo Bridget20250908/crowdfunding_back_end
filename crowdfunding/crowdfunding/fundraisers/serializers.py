@@ -21,6 +21,7 @@ class FundraiserSerializer(serializers.ModelSerializer):
 
 class FundraiserDetailSerializer(FundraiserSerializer):
     pledges = PledgeSerializer(many=True, read_only=True)
+    total_pledged = serializers.ReadOnlyField(source='get_total_pledged')
 
     def update(self, instance, validated_data):
         instance.title = validated_data.get('title', instance.title)

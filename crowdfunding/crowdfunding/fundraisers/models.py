@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 
 
 class Fundraiser(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
     description = models.TextField()
     goal = models.IntegerField()
     image = models.URLField()
@@ -15,6 +15,9 @@ class Fundraiser(models.Model):
         related_name='owned_fundraisers',
     )
 
+    def get_total_pledged(self):
+        PledgeSum = (pledge.amount for pledge in self.pledges.all())
+        return sum(PledgeSum)
 
 class Pledge(models.Model):
     amount = models.IntegerField()

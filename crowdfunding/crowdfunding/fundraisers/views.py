@@ -5,6 +5,7 @@ from .serializers import FundraiserSerializer, PledgeSerializer, FundraiserDetai
 from django.http import Http404
 from rest_framework import status, permissions
 from .permissions import IsOwnerOrReadOnly
+from .permissions import IsSupporterOrReadOnly
 
 
 class FundraiserList(APIView):
@@ -65,6 +66,7 @@ class FundraiserDetail(APIView):
 
 
 class PledgeList(APIView):
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         pledges = Pledge.objects.all()
@@ -82,7 +84,7 @@ class PledgeList(APIView):
 class PledgeDetail(APIView):
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly,
-        IsOwnerOrReadOnly
+        IsSupporterOrReadOnly
     ]
 
     def get_object(self, pk):
