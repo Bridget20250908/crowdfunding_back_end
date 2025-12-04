@@ -1,4 +1,4 @@
-# Crowd Funding Backend
+# CrowdFunding Backend
 
 ### A link to the deployed project.
 [Crowd Funding Backend](https://bridget-crowdfunding-29f799e098ab.herokuapp.com)
@@ -64,3 +64,9 @@
   * Pledge Table
   
     ![db_scheme_pledge.png](db_scheme_pledge.png)
+
+| URL | HTTP Method | Purpose | Request Body | Success Response Code | Authentication/Authorisation |
+| --- | ----------- | ------- | ------------ | --------------------- | ---------------------------- |
+|users/|Post|create users| {"username": string, "password": string, "email":string} | http 200 ok|  authentication |
+|fundraisers/  |get|show all fundraisers| NO BODY| http 200 ok| authentication |
+|pledge/|post| pledge to a fundraiser| 
