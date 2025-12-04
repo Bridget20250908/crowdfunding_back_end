@@ -81,7 +81,7 @@ class AnswerList(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class PledgeDetail(APIView):
+class AnswerDetail(APIView):
     permission_classes = [
         permissions.IsAuthenticatedOrReadOnly,
         IsProviderOrReadOnly
