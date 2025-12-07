@@ -65,16 +65,16 @@
   
     ![db_scheme_pledge.png](Pics/db_scheme_pledge.png)
 
-| URL | HTTP Method| Purpose | Request Body | Success Response Code | Authentication/Authorisation |
-| --- |------------| ------- | ------------ | --------------------- | ------------------------ |
-|users/| post      |create users| {"username": string, "password": string, "email":string} | http 200 ok|authentication|
-|fundraisers/  | get|show all fundraisers| NO BODY| http 200 ok| authentication |
-|fundraisers/ |post| create fundraiers| {"title":string, "description":string, "goal":integer, "is_open": boolean}|http 200 ok|authentication|
-|pledges/|get| show all pledges| NO BODY |http 200 ok | authentication|
-|pledges/| post| pledge to a fundraiser| {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int}| http 200 ok |authentication|
-|api-token-auth/| get | creat token for user|{"username" : string, "password" : string}| http 200 ok| authentication|
-|fundraisers/#id/|put| change fundraiser details |{"title":string, "description":string, "goal":integer, "is_open": boolean}|http 200 ok|authorisation-bear token|
-|pledges/#id/|put| change pledge details| {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int}| http 200 ok|authorisation-bear token|
+| URL              | HTTP Method | Purpose                   | Request Body                                                                 | Success Response Code | Authentication/Authorisation |
+|------------------|-------------|---------------------------|------------------------------------------------------------------------------|-----------------------|------------------------------|
+| users/           | post        | create users              | {"username": string, "password": string, "email":string}                     | http 200 ok           | authentication               |
+| fundraisers/     | get         | show all fundraisers      | NO BODY                                                                      | http 200 ok           | authentication               |
+| fundraisers/     | post        | create fundraisers        | {"title":string, "description":string, "goal":integer, "is_open": boolean}   | http 200 ok           | authentication               |
+| pledges/         | get         | show all pledges          | NO BODY                                                                      | http 200 ok           | authentication               |
+| pledges/         | post        | pledge to a fundraiser    | {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int} | http 200 ok           | authentication               |
+| api-token-auth/  | get         | create token for user     | {"username" : string, "password" : string}                                   | http 200 ok           | authentication               |
+| fundraisers/#id/ | put         | change fundraiser details | {"title":string, "description":string, "goal":integer, "is_open": boolean}   | http 200 ok           | authorisation-bear token     |
+| pledges/#id/     | put         | change pledge details     | {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int} | http 200 ok           | authorisation-bear token     |
 
 
 
