@@ -67,14 +67,16 @@
 
 | URL              | HTTP Method | Purpose                   | Request Body                                                                 | Success Response Code | Authentication/Authorisation |
 |------------------|-------------|---------------------------|------------------------------------------------------------------------------|-----------------------|------------------------------|
-| users/           | post        | create users              | {"username": string, "password": string, "email":string}                     | http 200 ok           | anyone               |
-| fundraisers/     | get         | show all fundraisers      | NO BODY                                                                      | http 200 ok           | anyone               |
-| fundraisers/     | post        | create fundraisers        | {"title":string, "description":string, "goal":integer, "is_open": boolean}   | http 200 ok           | users               |
-| pledges/         | get         | show all pledges          | NO BODY                                                                      | http 200 ok           | anyone               |
-| pledges/         | post        | pledge to a fundraiser    | {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int} | http 200 ok           | users              |
-| api-token-auth/  | get         | create token for user     | {"username" : string, "password" : string}                                   | http 200 ok           | users               |
-| fundraisers/#id/ | put         | change fundraiser details | {"title":string, "description":string, "goal":integer, "is_open": boolean}   | http 200 ok           | fundraiser owner    |
-| pledges/#id/     | put         | change pledge details     | {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int} | http 200 ok           | pledge supporter     |
+| users/           | POST        | create users              | {"username": string, "password": string, "email":string}                     | http 201 Created      | anyone                       |
+| fundraisers/     | GET         | show all fundraisers      | NO BODY                                                                      | http 200 OK           | anyone                       |
+| fundraisers/     | POST        | create fundraisers        | {"title":string, "description":string, "goal":integer, "is_open": boolean}   | http 201 Created      | users                        |
+| fundraisers/#id/ | DELETE      | delete a fundraiser       | NO BODY                                                                      | http 204 No Content   | fundraiser owner             |
+| pledges/         | GET         | show all pledges          | NO BODY                                                                      | http 200 OK           | anyone                       |
+| pledges/         | POST        | pledge to a fundraiser    | {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int} | http 201 Created      | users                        |
+| pledges/#id/     | DELETE      | delete a pledge           | NO BODY                                                                      | http 204 No Content   | pledge supporter             |
+| api-token-auth/  | GET         | create token for user     | {"username" : string, "password" : string}                                   | http 200 OK           | users                        |
+| fundraisers/#id/ | GET         | change fundraiser details | {"title":string, "description":string, "goal":integer, "is_open": boolean}   | http 200 OK           | fundraiser owner             |
+| pledges/#id/     | GET         | change pledge details     | {"amount" : int, "comment": string, "anonymous": boolean, "fundraiser": int} | http 200 OK           | pledge supporter             |
 
 
 
